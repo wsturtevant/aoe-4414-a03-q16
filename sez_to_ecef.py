@@ -62,8 +62,8 @@ R_y = numpy.array([[math.sin(o_lat_rad), 0, math.cos(o_lat_rad)],
                    [0.0, 1.0, 0.0],
                    [-math.cos(o_lat_rad), 0, math.sin(o_lat_rad)]])
 
-R_z = numpy.array([[math.cos(o_lat_rad), 0, -math.sin(o_lat_rad)],
-                   [-math.cos(o_lat_rad), 0, math.sin(o_lat_rad)],
+R_z = numpy.array([[math.cos(o_lon_rad), -math.sin(o_lon_rad), 0],
+                   [math.sin(o_lon_rad), math.cos(o_lon_rad), 0],
                    [0.0, 0.0, 1.0]])
 
 SEZ = numpy.array([[s_km], [e_km], [z_km]])
@@ -83,4 +83,4 @@ print('ecef_y_km: '+str(ecef_y_km))
 print('ecef_z_km: '+str(ecef_z_km))
 
 # Test Usage: 
-# py llh_to_ecef.py 37.228863 -76.386573 0.63
+# py sez_to_ecef.py 40.496 -80.246 0.0 0.0 1.0 0.3
